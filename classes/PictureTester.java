@@ -16,6 +16,58 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  public static void testNegate()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+  public static void testGrayscale()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+  public static void testFixUnderwater(){
+    Picture beach = new Picture("water.jpg");
+    beach.explore();
+    beach.fixUnderWater();
+    beach.explore();
+  }
+  public static void testMirrorVerticalRightToLeft(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorVerticalRightToLeft();
+    beach.explore();
+  }
+  public static void testMirrorHorizontal(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorHorizontal();
+    beach.explore();
+  }
+  public static void testMirrorHorizontalBotToTop(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorHorizontalBotToTop();
+    beach.explore();
+  }
+  public static void testMirrorDiagonal(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorDiagonal();
+    beach.explore();
+  }
+  
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -34,12 +86,38 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
+  public static void testMirrorArms()
+  {
+    Picture temple = new Picture("snowman.jpg");
+    temple.explore();
+    temple.mirrorArms();
+    temple.explore();
+  }
+  public static void testMirrorGull(){
+    Picture temple = new Picture("seagull.jpg");
+    temple.explore();
+    temple.mirrorGull();
+    temple.explore();
+  }
+  public static void testCopy(){
+    Picture temple = new Picture("seagull.jpg");
+    Picture temple2 = new Picture("snowman.jpg");
+    temple.explore();
+    temple.copy(temple2,50,50,250,250);
+    temple.explore();
+  }
   
   /** Method to test the collage method */
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
+    canvas.explore();
+  }
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
     canvas.explore();
   }
   
@@ -50,6 +128,12 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  public static void testEdgeDetection2()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetection2(10);
+    swan.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -58,7 +142,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -66,14 +150,19 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
+    //testMirrorDiagonal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
+    //testMyCollage();
     //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
