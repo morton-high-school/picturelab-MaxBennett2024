@@ -40,7 +40,7 @@ public class PictureTester
   public static void testFixUnderwater(){
     Picture beach = new Picture("water.jpg");
     beach.explore();
-    beach.fixUnderWater();
+    beach.fixUnderwater();
     beach.explore();
   }
   public static void testMirrorVerticalRightToLeft(){
